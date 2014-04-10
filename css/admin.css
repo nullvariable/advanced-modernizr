@@ -1,0 +1,39 @@
+#scripts_filter {
+    width: 8em;
+    height: 28px;
+    padding-top: 1px;
+}
+#scripts_table tr {
+    height: 23px;
+}
+#scripts_filter_close {
+    display: none;
+}
+#scripts_table th, #scripts_table td {
+    width: auto;
+}
+#scripts_table th {
+    padding: 10px 0px 10px 10px;
+}
+#scripts_table td {
+    padding: 4px 0px 2px 10px;
+}
+#scripts_table .center {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+.expand td span, .expand td strong, .tablenav-pages a {
+    cursor: pointer;
+}
+#scripts_table th.script {
+    width: 40%;
+}
+.tablenav.top .dashicons {
+    line-height: 35px;
+}
+#fake_column {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
