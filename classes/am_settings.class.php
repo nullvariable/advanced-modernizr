@@ -109,7 +109,7 @@ class am_settings
             ));
             add_screen_option('per_page', array(
                 'label' => __("Scripts per screen", AM_SLUG),
-                'default' => 10,
+                'default' => "10",
                 'option' => AM_SLUG . '_scripts_per_screen'
             ));
             add_filter('manage_' . $screen->id . '_columns', array($this, 'hack_table_column'));
@@ -127,7 +127,7 @@ class am_settings
             // get the default value if none is set
             $per_page = $screen->get_option('per_page', 'default');
         }
-        return $per_page;
+        return "$per_page";
     }
     function hack_table_column() {
         return array(self::hide_admin_option=>__("Hide Admin Scripts", AM_SLUG));
