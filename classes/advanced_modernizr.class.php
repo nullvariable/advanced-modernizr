@@ -67,8 +67,12 @@ class advanced_modernizr {
                     break;
             }
         }
-        wp_localize_script(self::script_slug, 'am_ll_scripts', $lazy_loader['lazy']);
-        set_transient(AM_SLUG.'_lazyloader', $lazy_loader);
+        if (isset($lazy_loader['lazy']) && is_array($lazy_loader['lazy'])) {
+            wp_localize_script(self::script_slug, 'am_ll_scripts', $lazy_loader['lazy']);
+            set_transient(AM_SLUG.'_lazyloader', $lazy_loader);
+        } else {
+            set_transient(AM_SLUG.'_lazyloader', array());
+        }
     }
     function build_ll() {
         $ll = array();
